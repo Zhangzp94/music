@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        div{
+            background-color: #fff;
+            width: 300px;
+            height: 3000px;
+            /*border-bottom: 1px solid red;*/
+            border-top: 2px solid red;
+            position: relative;
+        }
+        /*div::after{*/
+        /*    content: "";*/
+        /*    position: absolute;*/
+        /*    bottom: 0;*/
+        /*    left: 0;*/
+        /*    height: 1px;*/
+        /*    background-color:red;*/
+        /*    width: 100%;*/
+        /*    transform: scaleY(0.5);*/
+        /*    transform-origin: top left;*/
+        /*}*/
+        div::before{
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 200%;
+            height: 200%;
+            border: 1px solid red;
+            transform: scale(0.5 , 0.5);
+            transform-origin: top left;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+<body>
+<div>
+111
+</div>
+<script>
+ class Foo{
+     constructor(x,y) {
+         this.x = x;
+         this.y = y;
+     }
+ }
+ var res = new Foo({x:1,y:2})
+ console.log(res)
+</script>
+</body>
+</html>
